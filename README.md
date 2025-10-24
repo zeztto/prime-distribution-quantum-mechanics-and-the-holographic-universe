@@ -1,18 +1,25 @@
-# Welcome to React Router!
+# Prime Distribution, Quantum Mechanics, and the Holographic Universe
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern web application for presenting the academic paper "소수의 분포, 양자역학, 그리고 홀로그래픽 우주" (Prime Distribution, Quantum Mechanics, and the Holographic Universe).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Overview
+
+This project is a dark-themed blog application built with React Router v7 that presents a theoretical framework connecting:
+
+- The Riemann Hypothesis and prime number distribution
+- Quantum mechanics and the Montgomery-Dyson discovery
+- Holographic universe theory with testable predictions
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🌑 **Dark Mode Design** - Permanent dark theme optimized for readability
+- 📖 **Interactive Paper Reading** - Clean, distraction-free reading experience
+- 📑 **Table of Contents** - Easy navigation through 7 paper sections
+- ✨ **Smooth Animations** - Framer Motion for elegant transitions
+- 📱 **Responsive Design** - Optimized for desktop and mobile devices
+- 🎨 **Tailwind CSS** - Modern styling with custom dark mode configuration
+- ⚡️ **Hot Module Replacement** - Fast development experience
+- 🔒 **TypeScript** - Type-safe codebase
 
 ## Getting Started
 
@@ -34,6 +41,41 @@ npm run dev
 
 Your application will be available at `http://localhost:5173`.
 
+## Project Structure
+
+```
+app/
+├── components/
+│   ├── PaperMarkdownSection.tsx  # Markdown renderer with dark mode
+│   ├── PaperSection.tsx           # Paper section component
+│   ├── TableOfContents.tsx        # Navigation TOC
+│   └── ThemeToggle.tsx            # Theme toggle (legacy)
+├── contexts/
+│   └── ThemeContext.tsx           # Theme context provider
+├── data/
+│   └── paper-content.ts           # Paper content and metadata
+├── routes/
+│   ├── home.tsx                   # Landing page
+│   ├── paper.tsx                  # Main paper reading page
+│   ├── paper-full.tsx             # Full paper view (alternative)
+│   └── paper-sections-backup.tsx # Backup sections
+└── root.tsx                       # App root component
+
+public/
+├── full-paper.md                  # Full paper markdown
+└── paper.pdf                      # PDF version
+```
+
+## Paper Sections
+
+1. **서론 (Introduction)** - Historical context and motivation
+2. **양자역학적 해석 (Quantum Mechanical Interpretation)** - Montgomery-Dyson connection
+3. **홀로그래픽 원리와 회전하는 블랙홀 (Holographic Principle and Rotating Black Holes)** - Theoretical framework
+4. **이론적 예측 (Theoretical Predictions)** - Five testable predictions (2025-2035)
+5. **수학적 형식화 (Mathematical Formalization)** - Rigorous mathematical treatment
+6. **결론 (Conclusion)** - Summary and implications
+7. **참고문헌 (References)** - Academic sources
+
 ## Building for Production
 
 Create a production build:
@@ -44,44 +86,59 @@ npm run build
 
 ## Deployment
 
+The built application can be deployed to any platform that supports Node.js:
+
+- Vercel
+- Netlify
+- AWS
+- Google Cloud
+- Digital Ocean
+- Railway
+- Fly.io
+
 ### Docker Deployment
 
-To build and run using Docker:
-
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t paper-blog .
+docker run -p 3000:3000 paper-blog
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Technology Stack
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+- **React Router v7** - Full-stack React framework
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Lucide React** - Icon library
+- **Markdown** - Content formatting
+- **Vite** - Build tool and dev server
 
-### DIY Deployment
+## Key Technical Implementations
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+### Dark Mode
+- Permanent dark theme (no toggle)
+- Custom Tailwind configuration with `darkMode: 'class'`
+- Optimized text colors for readability (white/light gray on dark backgrounds)
 
-Make sure to deploy the output of `npm run build`
+### Markdown Rendering
+- Custom prose styles with `!important` overrides
+- Syntax highlighting for code blocks
+- Responsive typography
+- Proper heading hierarchy with scroll anchors
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+### Animations
+- Framer Motion entrance animations
+- Staggered section reveals
+- Smooth transitions between states
 
-## Styling
+## Contributing
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This is an academic paper presentation project. For questions or suggestions, please open an issue.
+
+## License
+
+This project is for academic and educational purposes.
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router
